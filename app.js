@@ -22,7 +22,7 @@ app.get('/healthy', (req, res) => {
 // Rota principal
 app.post('/create-transaction', async (req, res) => {
   try {
-    const {  email, phone, amount } = req.body;
+    const { phone, amount } = req.body;
 
   
 
@@ -43,13 +43,13 @@ app.post('/create-transaction', async (req, res) => {
       paymentMethod: 'pix',
        pix: {expiresInDays: 1},
       customer: {
-        name: "Bianca Josefa Rodrigues",
-        email: email,
-        document: { type: 'cpf', number: '81038638402' },
+        name: "Alejandro Magno Junger",
+        email: 'alejandromagno@gmail.com',
+        document: { type: 'cpf', number: '18057076712' },
         phone:phoneNumber
       },
       items: [{
-        title: 'Recarga',
+        title: 'Recarga Promo',
         unitPrice: newAmount,
         quantity: 1,
         tangible: false
